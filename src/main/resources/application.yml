@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: helloworld-service
+  config:
+    import: "optional:configserver:http://localhost:8088"
+    
+    
+ 
+
+  cloud:
+    loadbalancer:
+      health-check:
+        initial-delay: 1s
+      clients:
+        myclient:
+          health-check:
+            interval: 30s
